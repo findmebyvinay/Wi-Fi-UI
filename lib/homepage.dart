@@ -47,11 +47,14 @@ class _HomePageState extends State<HomePage> {
               Row(
                 mainAxisAlignment:MainAxisAlignment.start,
                 children: [
-               IconButton(onPressed:oonOpenBox, icon:Icon(Icons.wifi,size: 20,color: Colors.white,)),
-                 const SizedBox(width: 50,),
+                   Icon(Icons.check,size:20,color: Colors.white,),
+                   const SizedBox(width: 50,),
                   Text('Thapa_Wi-Fi',style: TextStyle(
                     color: Colors.white
-                  ),)
+                  ),),
+                  const SizedBox(width: 70,),
+                  Icon(Icons.lock,color: Colors.white,size: 10,),
+                    IconButton(onPressed:oonOpenBox, icon:Icon(Icons.wifi,size: 20,color: Colors.white,)),
                 ],
               ),
               Divider(height: 5,),
@@ -59,11 +62,13 @@ class _HomePageState extends State<HomePage> {
               Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                IconButton(onPressed: oonOpenBox, icon:Icon(Icons.wifi,size: 20,color: Colors.white,))
-                  ,const SizedBox(width: 50,),
+                const SizedBox(width: 60,),
                   Text('Techmind_Wi-Fi',style: TextStyle(
                     color: Colors.white
                   ),),
+                  const SizedBox(width: 75,),
+                   IconButton(onPressed: oonOpenBox, icon:Icon(Icons.wifi,size: 20,color: Colors.white,))
+                  ,
                   
               ],
               ),
