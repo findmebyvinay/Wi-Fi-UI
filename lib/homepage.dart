@@ -12,7 +12,15 @@ class _HomePageState extends State<HomePage> {
 
   void oonOpenBox(){
     showDialog(context: context, builder: (context)=> AlertDialog(
-      content: Text('Connect with this wifi? \n Yes             No',),
+      content:Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+           Text('Connect with this wifi? ',),
+           const SizedBox(height: 10,),
+           ElevatedButton(onPressed: (){}, child:Text('Yes'))
+        ],
+      ),
+
     ));
   }
   Widget build(BuildContext context) {
