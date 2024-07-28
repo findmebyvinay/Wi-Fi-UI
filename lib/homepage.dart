@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -9,16 +10,42 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   @override
+  void TextConfirm(){
+    TextField(
+      controller: null,
+      decoration: InputDecoration(
+        hintText:'Enter password',
+        icon: Icon(Icons.key),
+        border: OutlineInputBorder(
+
+        )
+        
+      ),
+    );
+  }
 
   void oonOpenBox(){
     showDialog(context: context, builder: (context)=> AlertDialog(
-      content:Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-           Text('Connect with this wifi? ',),
-           const SizedBox(height: 10,),
-           ElevatedButton(onPressed: (){}, child:Text('Yes'))
-        ],
+      content:Container(
+        width:80,
+        height: 100,
+        child: Column(
+          
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+             Text('Connect with this wifi? ',),
+             const SizedBox(height: 10,),
+             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ElevatedButton(onPressed:TextConfirm, child:Text('Yes')),
+                  ElevatedButton(onPressed: (){
+                    Navigator.pop(context);
+                  }, child:Text('No'))
+              ],
+             )
+          ],
+        ),
       ),
 
     ));
