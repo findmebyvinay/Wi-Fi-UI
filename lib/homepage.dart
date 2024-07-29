@@ -11,17 +11,13 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   void TextConfirm(){
-    TextField(
-      controller: null,
-      decoration: InputDecoration(
-        hintText:'Enter password',
-        icon: Icon(Icons.key),
-        border: OutlineInputBorder(
-
-        )
-        
+    showDialog(context: context, builder: (context)=>AlertDialog(
+      content: Container(
+        height: 100,
+        width: 100,
+        child: Center(child: Text('Connected successfully !')),
       ),
-    );
+    ));
   }
 
   void oonOpenBox(){
