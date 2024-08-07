@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:iphone_wifi/login.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -34,10 +35,12 @@ class _HomePageState extends State<HomePage> {
              Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ElevatedButton(onPressed:TextConfirm, child:Text('Yes')),
+                ElevatedButton(onPressed:(){
+                  Navigator.push(context, MaterialPageRoute(builder:(context)=> Login()));
+                }, child:Text('Yes')),
                   ElevatedButton(onPressed: (){
                     Navigator.pop(context);
-                  }, child:Text('No'))
+                  }, child:Text('No')),
               ],
              )
           ],
